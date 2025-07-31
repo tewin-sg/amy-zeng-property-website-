@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
   auth_type: implicit
-  app_id: your-site-id
+  app_id: inspiring-choux-2cfd44
 
 media_folder: "images"
 public_folder: "/images"
