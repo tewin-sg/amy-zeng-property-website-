@@ -6,38 +6,39 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "settings"
-    label: "Site Settings" 
+  - name: settings
+    label: Site Settings
     files:
-      - label: "Contact Information"
-        name: "contact"
-        file: "data/contact.json"
+      - label: Contact Information
+        name: contact
+        file: data/contact.json
         fields:
-          - {label: "Phone Number", name: "phone", widget: "string", default: "9177 2688"}
-          - {label: "WeChat", name: "wechat", widget: "string", default: "a91772688"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "PA Email", name: "pa_email", widget: "string"}
+          - {label: Phone Number, name: phone, widget: string, default: "9177 2688"}
+          - {label: WeChat, name: wechat, widget: string, default: "a91772688"}
+          - {label: Email, name: email, widget: string}
+          - {label: PA Email, name: pa_email, widget: string}
 
-  - name: "properties"
-    label: "Properties"
-    folder: "data/properties"
+  - name: properties
+    label: Properties
+    folder: data/properties
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Property Title", name: "title", widget: "string"}
-      - {label: "Status", name: "status", widget: "select", options: ["sold", "rented", "available"]}
-      - {label: "District", name: "district", widget: "string"}
-      - {label: "Price", name: "price", widget: "string"}
-      - {label: "Description", name: "body", widget: "markdown"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: Property Title, name: title, widget: string}
+      - {label: Status, name: status, widget: select, options: [sold, rented, available]}
+      - {label: District, name: district, widget: string}
+      - {label: Price, name: price, widget: string}
+      - {label: Above Valuation, name: above_valuation, widget: string, required: false}
+      - {label: Description, name: body, widget: markdown}
+      - {label: Featured, name: featured, widget: boolean, default: false}
 
-  - name: "testimonials"
-    label: "Testimonials"
-    folder: "data/testimonials" 
+  - name: testimonials
+    label: Testimonials
+    folder: data/testimonials
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Client Name", name: "name", widget: "string"}
-      - {label: "Property Details", name: "property", widget: "string"}
-      - {label: "Testimonial", name: "content", widget: "text"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: Client Name, name: name, widget: string}
+      - {label: Property Details, name: property, widget: string}
+      - {label: Testimonial, name: content, widget: text}
+      - {label: Featured, name: featured, widget: boolean, default: false}
