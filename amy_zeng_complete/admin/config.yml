@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: tewin-sg/amy-zeng-property-website
   branch: main
 
 media_folder: "images"
