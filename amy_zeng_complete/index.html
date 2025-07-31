@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Zeng 房姐姐 | Singapore Property Expert | ERA Diamond Achiever</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #b8860b;
+            --secondary: #333;
+            --accent: #d4af37;
+            --light: #f9f5eb;
+            --dark: #1a1a1a;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+        }
+        .gold-text {
+            color: var(--primary);
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        .testimonial {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .achievement-card {
+            border: 1px solid #eaeaea;
+            transition: all 0.3s ease;
+        }
+        .achievement-card:hover {
+            border-color: var(--primary);
+        }
+        .property-image {
+            height: 250px;
+            object-fit: cover;
+        }
+        .social-icon {
+            transition: transform 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .sticky-contact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        /* CRM Styles */
+        .crm-sidebar {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            min-height: 100vh;
+        }
+        .crm-sidebar-item {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 4px 0;
+        }
+        .crm-sidebar-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .crm-sidebar-item.active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        }
+        .crm-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+        }
+        .crm-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .admin-login {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .login-card {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .hidden { display: none !important; }
+        .editable {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 4px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .editable:hover {
+            background-color: #e9ecef;
+        }
+        .edit-mode {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title::after {
+                width: 60px;
+            }
+            .crm-sidebar {
+                display: none;
+            }
+            .crm-sidebar.mobile-open {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 50;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Public Website -->
+    <div id="public-site">
+        <!-- Header Navigation -->
+        <header class="bg-white shadow-md py-4">
+            <div class="container mx-auto px-4 flex flex-wrap items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://static.wixstatic.com/media/13f09a_6e16fb044073406ba53ac7cfb51017b0~mv2.png/v1/fill/w_133,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_6e16fb044073406ba53ac7cfb51017b0~mv2.png" alt="Amy Zeng Logo" class="h-16">
+                    <div class="ml-4">
+                        <h1 class="text-2xl font-bold">AMY ZENG 房姐姐</h1>
+                        <p class="text-sm text-gray-600">ERA Diamond Achiever | CEA No: R027564</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="nav-link py-2 hover:text-yellow-700">ABOUT</a>
+                    <a href="#achievements" class="nav-link py-2 hover:text-yellow-700">ACHIEVEMENT</a>
+                    <a href="#listings" class="nav-link py-2 hover:text-yellow-700">LISTINGS</a>
+                    <a href="#new-projects" class="nav-link py-2 hover:text-yellow-700">NEW PROJECTS</a>
+                    <a href="#guides" class="nav-link py-2 hover:text-yellow-700">GUIDES</a>
+                    <a href="#transactions" class="nav-link py-2 hover:text-yellow-700">TRANSACTIONS RECORDS</a>
+                    <a href="#blog" class="nav-link py-2 hover:text-yellow-700">BLOG</a>
+                    <button onclick="showAdminLogin()" class="text-xs bg-gray-500 text-white px-2 py-1 rounded">Admin</button>
+                </nav>
+                
+                <div class="block md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-white shadow-inner">
+                <div class="flex flex-col space-y-3 py-3">
+                    <a href="#about" class="py-2 hover:text-yellow-700">ABOUT</a>
+                    <a href="#achievements" class="py-2 hover:text-yellow-700">ACHIEVEMENT</a>
+                    <a href="#listings" class="py-2 hover:text-yellow-700">LISTINGS</a>
+                    <a href="#new-projects" class="py-2 hover:text-yellow-700">NEW PROJECTS</a>
+                    <a href="#guides" class="py-2 hover:text-yellow-700">GUIDES</a>
+                    <a href="#transactions" class="py-2 hover:text-yellow-700">TRANSACTIONS RECORDS</a>
+                    <a href="#blog" class="py-2 hover:text-yellow-700">BLOG</a>
+                    <button onclick="showAdminLogin()" class="text-left py-2 text-gray-500">Admin Login</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative">
+            <div class="relative bg-gray-900 overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <div class="relative h-96 z-10 bg-cover bg-center" style="background-image: url('https://static.wixstatic.com/media/13f09a_04da98902c884f76986c4f0479e4226c~mv2.jpeg/v1/crop/x_0,y_5,w_609,h_795/fill/w_425,h_564,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/17f50b-AZ4.jpeg');">
+                        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center px-8 md:px-16">
+                            <div class="max-w-lg">
+                                <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                                    From Chongqing Property Investor to Singapore's ERA Diamond Achiever
+                                </h1>
+                                <p class="mt-4 text-lg text-gray-300">
+                                    China–Singapore Property Investor · Top High-Value Deal Closer
+                                </p>
+                                <div class="mt-8 flex flex-wrap gap-4">
+                                    <a href="#contact" class="px-6 py-3 bg-yellow-700 hover:bg-yellow-600 text-white font-medium rounded-md transition duration-300">
+                                        Contact Amy
+                                    </a>
+                                    <a href="#achievements" class="px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:text-gray-900 transition duration-300">
+                                        View Achievements
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Bar -->
+        <section class="bg-yellow-700 text-white py-4">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-center md:justify-between">
+                    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <a href="tel:91772688" class="hover:text-yellow-200">9177 2688</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-weixin mr-2"></i>
+                            <span>WeChat: a91772688</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <a href="/cdn-cgi/l/email-protection#99f8a0a8aeaeabafa1a1d9fef4f8f0f5b7faf6f4" class="hover:text-yellow-200">
+                            <i class="fas fa-envelope mr-1"></i> <span class="__cf_email__" data-cfemail="a1c09890969693979999e1c6ccc0c8cd8fc2cecc">[email&#160;protected]</span>
+                        </a>
+                        <a href="/cdn-cgi/l/email-protection#b1c1d08880868683878989f1d6dcd0d8dd9fd2dedc" class="hover:text-yellow-200">
+                            <i class="fas fa-user-tie mr-1"></i> PA: <span class="__cf_email__" data-cfemail="c1b1a0f8f0f6f6f3f7f9f981a6aca0a8adefa2aeac">[email&#160;protected]</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="https://www.tiktok.com/@amyzeng111" class="social-icon hover:text-yellow-200"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/amyzeng.sg" class="social-icon hover:text-yellow-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://sg.linkedin.com/in/amyzeng111" class="social-icon hover:text-yellow-200"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/amyzeng111/" class="social-icon hover:text-yellow-200"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                        <h2 class="section-title text-3xl md:text-4xl font-bold mb-8">
+                            From 20-year-old property investor to cross-border portfolio of over 10 SG & China properties
+                        </h2>
+                        <p class="text-gray-700 mb-6">
+                            Native Chongqing, China, Zeng began her property investment journey at the young age of 20. Demonstrating an entrepreneurial spirit and an astute eye for opportunities, she built and managed a diverse portfolio exceeding 20 properties at her peak. These holdings spanned Chongqing and Shanghai, including prestigious luxury developments such as ShangHai Xintiandi and ChongQing Tiandi, properties developed by Hong Kong-listed Shui On Land.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Her early successes include selling a property to her sister at a 50% discount, which still yielded a fourfold return. Several other properties appreciated substantially, some growing tenfold. These wins bolstered her confidence and laid the foundation for her methodical, ROI-driven investment approach.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Today, Zeng owns over 10 properties across Singapore and China, with the majority situated in Singapore. Her portfolio comprises a mix of condominium units, landed homes, and commercial properties such as shops/shophouses. These assets are strategically located across key areas including city fringes, the CBD, and Chinatown. Her deep cross-border investment expertise allows her to offer clients unique perspectives that maximise both capital appreciation and rental yields.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-1/2 pl-0 lg:pl-16">
+                        <div class="grid grid-cols-2 gap-6">
+                            <img src="https://static.wixstatic.com/media/13f09a_1b4d64f819f74f259f9ede815f9fdc68~mv2.jpeg/v1/crop/x_0,y_51,w_843,h_1374/fill/w_398,h_617,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_1b4d64f819f74f259f9ede815f9fdc68~mv2.jpeg" alt="Amy Zeng" class="rounded-lg shadow-lg w-full">
+                            <img src="https://static.wixstatic.com/media/13f09a_59155d1935c9462888ab23ccde1b155a~mv2.jpeg/v1/crop/x_0,y_48,w_1067,h_1325/fill/w_398,h_472,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_59155d1935c9462888ab23ccde1b155a~mv2.jpeg" alt="Amy Zeng" class="rounded-lg shadow-lg w-full mt-12">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold mb-8">Amy Zeng stands as a consistently top-performing Diamond Achiever at ERA Realty Network</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-yellow-700 text-4xl mb-2" data-editable="monthly-commission">$250,000+</h4>
+                            <p class="text-gray-600">Monthly commissions during peak periods</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-yellow-700 text-4xl mb-2" data-editable="total-transactions">800+</h4>
+                            <p class="text-gray-600">Transactions across residential, commercial, and retail sectors</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-yellow-700 text-4xl mb-2" data-editable="ranking">Top 50</h4>
+                            <p class="text-gray-600">Consistently ranked among ERA's Top Achievers out of 9,000 agents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured SOLD Properties -->
+        <section class="py-16 bg-gray-50" id="listings">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl font-bold mb-12 text-center">Featured SOLD Above Valuation</h2>
+                
+                <div class="mb-16">
+                    <div class="flex flex-wrap md:flex-nowrap">
+                        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                            <div class="bg-white rounded-lg overflow-hidden shadow-lg h-full">
+                                <img src="https://static.wixstatic.com/media/13f09a_b5b09c6442944c66852d6203305383b3~mv2.png/v1/crop/x_3,y_18,w_489,h_665/fill/w_285,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_b5b09c6442944c66852d6203305383b3~mv2.png" alt="Coffee shop" class="w-full h-64 object-cover object-center">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">SOLD</span>
+                                        <span class="text-yellow-700 font-bold">100% Above Valuation</span>
+                                    </div>
+                                    <h3 class="font-bold text-xl mb-2">Coffee shop at Northlink Building, Sembawang</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        Just two years into her career, Zeng sold two adjoining coffee shop units to listed F&B giant Chang Cheng Group, led by founder Ricky Kok. The group, which operates over 200 outlets, paid $5 million — doubling the $2.5 million valuation and breaking market records.
+                                    </p>
+                                    <div class="border-t border-gray-200 pt-4">
+                                        <p class="italic text-gray-600">
+                                            "Seller Teng Hwee praised Zeng's emotional intelligence, persuasive skills, and understanding of business owner psychology as key to the success of this exceptional deal."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full md:w-1/2 md:ml-8">
+                            <div class="bg-white rounded-lg overflow-hidden shadow-lg h-full">
+                                <img src="https://static.wixstatic.com/media/13f09a_3b0357d12e494d539cd84db3a276645a~mv2.png/v1/crop/x_0,y_11,w_1582,h_2155/fill/w_300,h_409,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_3b0357d12e494d539cd84db3a276645a~mv2.png" alt="Penthouse at The Laurels" class="w-full h-64 object-cover object-center">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">SOLD</span>
+                                        <span class="text-yellow-700 font-bold">25% Above Valuation</span>
+                                    </div>
+                                    <h3 class="font-bold text-xl mb-2">Penthouse at The Laurels (District 9)</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        In 2016, Amy sold a penthouse at The Laurels (District 9) for $9 million — achieving 25% above valuation on behalf of a former CEO of a listed company.
+                                    </p>
+                                    <div class="mt-4">
+                                        <h4 class="font-semibold mb-2">Other Notable Sales:</h4>
+                                        <ul class="list-disc pl-5 text-gray-600">
+                                            <li class="mb-2">Freehold semi-detached house in Changi (District 17) for $3.88 million, exceeding valuation by up to 18%</li>
+                                            <li>Singapore Landed Home purchased at 25% below market value with 100% capital appreciation in less than 10 years</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Property Features -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="featured-properties">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://static.wixstatic.com/media/13f09a_05d671e45a474a49bc9882000a9aa504~mv2.jpg/v1/crop/x_57,y_46,w_1543,h_2337/fill/w_291,h_392,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_05d671e45a474a49bc9882000a9aa504~mv2.jpg" alt="Featured property" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-1">Featured SOLD Above Valuation</h3>
+                            <p class="text-gray-600 text-sm">Luxury condominium in prime district with exceptional returns</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://static.wixstatic.com/media/13f09a_6991427b0f9c460982d7621877363e18~mv2.png/v1/crop/x_0,y_1,w_500,h_499/fill/w_414,h_413,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_6991427b0f9c460982d7621877363e18~mv2.png" alt="Investment property" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-1">Investment Portfolio</h3>
+                            <p class="text-gray-600 text-sm">Strategic properties across Singapore's prime locations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://static.wixstatic.com/media/13f09a_a51ef5116db441e79e60f731867d90b3~mv2.jpg/v1/crop/x_8,y_33,w_1492,h_932/fill/w_541,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_a51ef5116db441e79e60f731867d90b3~mv2.jpg" alt="Commercial property" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-1">Commercial Expertise</h3>
+                            <p class="text-gray-600 text-sm">Specialized knowledge in retail and commercial property transactions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Interviews Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl font-bold mb-12 text-center">Media Interviews</h2>
+                
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                        <a href="https://sg.news.yahoo.com/china-singapore-property-investor-amy-080000415.html" target="_blank">
+                            <img src="https://static.wixstatic.com/media/13f09a_b33a2713bdd54bd4b58aaeb5624bf7e0~mv2.png/v1/crop/x_6,y_15,w_648,h_872/fill/w_411,h_554,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-06-26%20at%209_59_34%E2%80%AFPM.png" alt="Yahoo News Interview" class="rounded-lg shadow-lg mx-auto">
+                        </a>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2 lg:pl-12">
+                        <h3 class="text-2xl font-bold mb-4">China-Singapore property investor Amy Zeng is top in closing high-value deals</h3>
+                        <p class="text-gray-600 mb-4">Featured in Yahoo News and other major publications</p>
+                        
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-4">
+                                Amy Zeng stands as a consistently top-performing Diamond Achiever at ERA Realty Network, earning monthly commissions that surpass $250,000 during peak periods. She is also honoured as an elite ERA Plush Member — an exclusive distinction granted to only 50 agents nationwide out of approximately 9,000 — recognising her excellence in luxury property transactions and her outstanding contribution to the real estate industry.
+                            </p>
+                            <p>
+                                Over her career spanning more than a decade, Zeng has successfully closed over 800 transactions across residential, commercial, and retail sectors. She has earned a formidable reputation for her ability to secure prices significantly above valuation, consistently ranking among ERA's Top Achievers, and maintaining Million Dollar Club membership since 2009.
+                            </p>
+                        </div>
+                        
+                        <a href="https://sg.news.yahoo.com/china-singapore-property-investor-amy-080000415.html" target="_blank" class="inline-block mt-6 px-6 py-3 bg-yellow-700 hover:bg-yellow-600 text-white font-medium rounded-md transition duration-300">
+                            Read Full Interview
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Strategy -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl font-bold mb-12">Amy Zeng's Property Investment Strategy</h2>
+                
+                <div class="flex flex-wrap md:flex-nowrap">
+                    <div class="w-full md:w-3/5 md:pr-12">
+                        <h3 class="text-2xl font-bold mb-6">Capital Appreciation & ROI-Driven Approach</h3>
+                        
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-4">
+                                Amy's investment philosophy is anchored in capital appreciation and return on investment. Her Geylang property, once difficult to finance, yielded strong results with rental income doubling over 15 years. Her sea-view apartment at International Plaza was converted to office use, generating 30–40% above market rents before being reverted to residential and rented out at $6,500/month—far above surrounding units.
+                            </p>
+                            
+                            <blockquote class="border-l-4 border-yellow-700 pl-4 italic my-6">
+                                "As an investor, ROI is key. We monitor rapid market changes and adapt accordingly."
+                            </blockquote>
+                            
+                            <p class="mb-4">
+                                She also demonstrated market foresight during COVID-19, replacing a vacated Chinatown retail tenant with a higher-paying one shortly after. Her ability to seize timing opportunities, adapt quickly, and generate strong returns consistently sets her apart.
+                            </p>
+                            
+                            <h4 class="text-xl font-semibold mb-4 mt-8">Zeng's Investment Strategy: ROI-Driven, Diversified, and Adaptive</h4>
+                            
+                            <p>
+                                Zeng's business acumen shapes her investment strategy, which focuses on achieving strong ROI and portfolio diversification. She invests in retail and commercial properties, including HDB shops and strata units in CBD, Chinatown, and Geylang. Some shops were leased to KTV operators, yielding high returns. Her Geylang property, initially challenging to finance, ultimately proved highly profitable with rental rates doubling over 15 years.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-2/5 mt-8 md:mt-0">
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h4 class="font-bold text-xl mb-4 text-yellow-700">Investment Success Stories</h4>
+                            
+                            <div class="space-y-4">
+                                <div class="pb-4 border-b border-gray-200">
+                                    <h5 class="font-semibold">International Plaza Sea-View Apartment</h5>
+                                    <p class="text-gray-600">Converted to office use: $5,000-$5,500/month (30-40% above market)</p>
+                                    <p class="text-gray-600">Later converted to residential: $6,500/month (vs $3,500-$4,500 nearby)</p>
+                                </div>
+                                
+                                <div class="pb-4 border-b border-gray-200">
+                                    <h5 class="font-semibold">Pasir Ris Landed Home (999-year leasehold)</h5>
+                                    <p class="text-gray-600">Purchased at $1.75M ($600K below valuation)</p>
+                                    <p class="text-gray-600">Nearly doubled in value in less than 10 years</p>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-semibold">Chinatown Retail Shop</h5>
+                                    <p class="text-gray-600">During COVID-19, quickly secured a new tenant at higher rental rate</p>
+                                    <p class="text-gray-600">Demonstrated market foresight during downturns</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-gray-200">
+                                <h5 class="font-semibold mb-2">Family Support Achievements</h5>
+                                <ul class="list-disc pl-5 text-gray-600">
+                                    <li>Gifted RMB 2 million to parents for retirement</li>
+                                    <li>Provided RMB 300,000 to each of her three sisters</li>
+                                    <li>Helped fund sisters' homes during early career</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Rented Units -->
+        <section class="py-16 bg-white" id="rentals">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl font-bold mb-12">Featured Rented Units</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="rental-properties">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Property Image</span>
+                        </div>
+                        <div class="p-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mb-2">RENTED</span>
+                            <h3 class="font-bold">D.8 City Square Residences</h3>
+                            <p class="text-gray-600">1 Bedroom</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Property Image</span>
+                        </div>
+                        <div class="p-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mb-2">RENTED</span>
+                            <h3 class="font-bold">D2 International Plaza</h3>
+                            <p class="text-gray-600">2 Bedroom</p>
+                            <a href="https://www.tiktok.com/@amyzeng111/video/7210992749837962497?is_from_webapp=1&sender_device=pc&web_id=7190399935896290818" class="text-yellow-700 hover:underline text-sm mt-2 inline-block">
+                                <i class="fab fa-tiktok mr-1"></i> Watch on TikTok
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Property Image</span>
+                        </div>
+                        <div class="p-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mb-2">RENTED</span>
+                            <h3 class="font-bold">D.11 Shelford Rd</h3>
+                            <p class="text-gray-600">4 Bedroom</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Property Image</span>
+                        </div>
+                        <div class="p-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mb-2">RENTED</span>
+                            <h3 class="font-bold">D.4 Teresa Ville</h3>
+                            <p class="text-gray-600">2 Bedroom</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mb-2">RENTED</span>
+                            <h3 class="font-bold text-xl mb-2">D1 The Sail@Marina Bay</h3>
+                            <p class="text-gray-600">3 Bedroom</p>
+                            <p class="mt-4 text-gray-700">
+                                Luxury apartment with stunning views of Marina Bay, featuring premium finishes and resort-style facilities.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded mb-2">RECENT TRANSACTION</span>
+                            <h3 class="font-bold text-xl mb-2">> $1M</h3>
+                            <p class="text-gray-600">Blk 146 Toa Payoh Lor 2 (4RM)</p>
+                            <p class="text-gray-500 text-sm">(Aug 2024)</p>
+                            <p class="mt-4 text-gray-700">
+                                Notable HDB transaction achieving premium pricing through strategic marketing and negotiation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Achievements -->
+        <section class="py-16 bg-gray-50" id="achievements">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl font-bold mb-12 text-center">Featured Awards & Achievements</h2>
+                
+                <div class="flex flex-wrap -mx-4" id="awards-section">
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-white rounded-lg shadow p-6 h-full">
+                            <div class="flex justify-center mb-4">
+                                <img src="https://static.wixstatic.com/media/13f09a_c87850e8566241e6a00106966ed51759~mv2.jpg/v1/crop/x_0,y_9,w_1240,h_1745/fill/w_233,h_279,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AwardController.jpg" alt="Award" class="h-48 object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-center mb-2">ERA Diamond Achiever</h3>
+                            <p class="text-gray-600 text-center">
+                                An exclusive distinction recognizing excellence in luxury property transactions
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-white rounded-lg shadow p-6 h-full">
+                            <div class="flex justify-center mb-4">
+                                <img src="https://static.wixstatic.com/media/13f09a_4a7851bf4bcf4781869393776bdc729d~mv2.jpg/v1/fill/w_242,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_4a7851bf4bcf4781869393776bdc729d~mv2.jpg" alt="Award" class="h-48 object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-center mb-2">ERA Top 50 Achiever</h3>
+                            <p class="text-gray-600 text-center">
+                                Consistently ranked among the top 50 out of 9,000+ agents nationwide
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-white rounded-lg shadow p-6 h-full">
+                            <div class="flex justify-center mb-4">
+                                <img src="https://static.wixstatic.com/media/13f09a_3752f1a3d8c44152ac7f03e063876b32~mv2.jpg/v1/crop/x_0,y_168,w_1240,h_1419/fill/w_120,h_123,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AwardController%20(1).jpg" alt="Award" class="h-48 object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-center mb-2">ERA Plush Member</h3>
+                            <p class="text-gray-600 text-center">
+                                Elite distinction granted to only 50 agents nationwide
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold mb-6">Covid-19 contribution & leadership</h3>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex flex-wrap md:flex-nowrap">
+                            <div class="w-full md:w-1/4 mb-4 md:mb-0 flex justify-center">
+                                <img src="https://static.wixstatic.com/media/13f09a_742e4ab1a9884dae9b07e97d0faef3d8~mv2.jpeg/v1/fill/w_172,h_224,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_742e4ab1a9884dae9b07e97d0faef3d8~mv2.jpeg" alt="Covid-19 contribution" class="h-40 object-contain">
+                            </div>
+                            
+                            <div class="w-full md:w-3/4 md:pl-6">
+                                <p class="text-gray-700 mb-4">
+                                    During the peak of the Covid-19 pandemic, Zeng applied her leadership and strategic acumen beyond real estate by stepping into a national healthcare role. She used her investor mindset — focused on strategy and execution — to support Singapore's pandemic response. She was GM and shareholder of Acumen Diagnostics, a joint venture with SGX-listed Q&M Dental Group and biotech firm ARL. Acumen was awarded the Covid-19 Resilience Certificate by then-Prime Minister Lee Hsien Loong.
+                                </p>
+                                <p class="text-gray-700">
+                                    Zeng remained tireless in her efforts until the Covid-19 outbreak was controlled and Acumen was listed under Q&M Aoxin. During this time, she also managed long-term property clients before returning full-time to real estate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 bg-white" id="testimonials">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl font-bold mb-12 text-center">Many Happy Customers Can't Be Wrong</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="testimonials-grid">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <blockquote class="mb-4 text-gray-700">
+                            "Amy has managed all my property investment portfolio including commercial & residential since she was ERA TOP Rookie. She is property investor with strong investment background. I have no worries about my property investment, I just collect my rental monthly."
+                        </blockquote>
+                        <div class="font-semibold">Mr Ng (Buyer/Seller/Landlord)</div>
+                        <div class="text-gray-500 text-sm">D.8 Shop (661 Buffalo Rd), D11 Landed house (Shelford Rd)</div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <blockquote class="mb-4 text-gray-700">
+                            "Teng Hwee praised Zeng's emotional intelligence, persuasive skills, and understanding of business owner psychology as key to the success of this exceptional deal. His testimonial is featured on ERA's website, underscoring Zeng's professionalism and results."
+                        </blockquote>
+                        <div class="font-semibold">Teng Hwee (Owner)</div>
+                        <div class="text-gray-500 text-sm">Coffeeshop: 10 Admiraty North Link #01-01/#01-02</div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <blockquote class="mb-4 text-gray-700">
+                            "Amy's market knowledge and investment acumen helped me make a confident purchase decision. Her negotiation skills secured an excellent deal for me, and her after-sales service has been exemplary."
+                        </blockquote>
+                        <div class="font-semibold">Joanne (Buyer/Landlord)</div>
+                        <div class="text-gray-500 text-sm">D10. Holland Residences</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap md:flex-nowrap items-center">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://static.wixstatic.com/media/13f09a_04da98902c884f76986c4f0479e4226c~mv2.jpeg/v1/crop/x_0,y_5,w_609,h_795/fill/w_425,h_564,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/17f50b-AZ4.jpeg" alt="Amy Zeng" class="rounded-lg shadow-lg mx-auto">
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 md:pl-12">
+                        <h2 class="section-title text-3xl font-bold mb-8">Amy's Philosophy</h2>
+                        
+                        <blockquote class="border-l-4 border-yellow-700 pl-6 mb-8 italic text-gray-700">
+                            "Agents need a strong business mindset — beyond a 9-to-5 attitude — with genuine commitment, honesty, and client-first transparency."
+                        </blockquote>
+                        
+                        <p class="text-gray-700 mb-6">
+                            Zeng mentors her team hands-on, focusing on strategy and ROI. She shares clients to reduce agents' costs and risks, balancing team growth with sales and consistent client care to ensure sustainable success without leaving anyone behind.
+                        </p>
+                        
+                        <p class="text-gray-700">
+                            Coming from an entrepreneurial family, Amy always prioritized supporting her loved ones. She helped fund her sisters' homes while rising in her early ERA career. In recent years, she fulfilled a decade-old promise by gifting RMB 2 million to her parents for their retirement and RMB 300,000 to each of her three sisters—proceeds from two Tiandi units sold in Chongqing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl font-bold mb-12 text-center">Contact Amy Now!</h2>
+                
+                <div class="flex flex-wrap md:flex-nowrap">
+                    <div class="w-full md:w-1/2 md:pr-8">
+                        <form class="bg-gray-50 rounded-lg p-8 shadow-md">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-yellow-700">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-yellow-700">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-yellow-700">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-yellow-700"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-3 px-4 bg-yellow-700 hover:bg-yellow-600 text-white font-medium rounded-md transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
+                        <div class="bg-gray-50 rounded-lg p-8 shadow-md h-full">
+                            <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                            
+                            <div class="space-y-4" id="contact-info">
+                                <div class="flex items-start">
+                                    <div class="text-yellow-700 mt-1 mr-4">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Phone</h4>
+                                        <a href="tel:91772688" class="text-gray-700 hover:text-yellow-700" data-editable="phone">9177 2688</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-yellow-700 mt-1 mr-4">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <a href="/cdn-cgi/l/email-protection#04653d35333336323c3c446369656d682a676b69" class="text-gray-700 hover:text-yellow-700" data-editable="email"><span class="__cf_email__" data-cfemail="e687dfd7d1d1d4d0dedea6818b878f8ac885898b">[email&#160;protected]</span></a>
+                                        <p class="text-gray-600 text-sm mt-1">PA: <a href="/cdn-cgi/l/email-protection#2b5b4a121a1c1c191d13136b4c464a424705484446" class="hover:text-yellow-700" data-editable="pa-email"><span class="__cf_email__" data-cfemail="3242530b03050500040a0a72555f535b5e1c515d5f">[email&#160;protected]</span></a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-yellow-700 mt-1 mr-4">
+                                        <i class="fab fa-weixin"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">WeChat</h4>
+                                        <p class="text-gray-700" data-editable="wechat">a91772688</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-yellow-700 mt-1 mr-4">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">ERA Realty Network</h4>
+                                        <p class="text-gray-700" data-editable="cea-number">CEA No: R027564Z</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-8 border-t border-gray-200">
+                                <h4 class="font-semibold mb-4">Follow Amy on Social Media</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://www.tiktok.com/@amyzeng111" class="social-icon text-xl hover:text-yellow-700"><i class="fab fa-tiktok"></i></a>
+                                    <a href="https://www.facebook.com/amyzeng.sg" class="social-icon text-xl hover:text-yellow-700"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://sg.linkedin.com/in/amyzeng111" class="social-icon text-xl hover:text-yellow-700"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/amyzeng111/" class="social-icon text-xl hover:text-yellow-700"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCoCQaTHAqCtBmRSrjFV_O3A" class="social-icon text-xl hover:text-yellow-700"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-4">AMY ZENG 房姐姐</h3>
+                        <p class="text-gray-400 mb-4">China–Singapore Property Investor · Top High-Value Deal Closer</p>
+                        <p class="text-gray-400">BA (Hons), Native of Chongqing, China.</p>
+                    </div>
+                    
+                    <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Amy</a></li>
+                            <li><a href="#achievements" class="text-gray-400 hover:text-white transition duration-300">Achievements</a></li>
+                            <li><a href="#listings" class="text-gray-400 hover:text-white transition duration-300">Featured Properties</a></li>
+                            <li><a href="#rentals" class="text-gray-400 hover:text-white transition duration-300">Rental Properties</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="w-full md:w-1/3">
+                        <h3 class="text-xl font-bold mb-4">Contact</h3>
+                        <p class="flex items-center text-gray-400 mb-2">
+                            <i class="fas fa-phone-alt mr-3"></i> 9177 2688
+                        </p>
+                        <p class="flex items-center text-gray-400 mb-2">
+                            <i class="fas fa-envelope mr-3"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec8dd5dddbdbdedad4d4ac8b818d8580c28f8381">[email&#160;protected]</a>
+                        </p>
+                        <p class="flex items-center text-gray-400">
+                            <i class="fab fa-weixin mr-3"></i> a91772688
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 mt-12 pt-8 flex flex-wrap items-center justify-between">
+                    <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Amy Zeng. All rights reserved. CEA No: R027564Z</p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://www.tiktok.com/@amyzeng111" class="text-gray-500 hover:text-white transition duration-300"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/amyzeng.sg" class="text-gray-500 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://sg.linkedin.com/in/amyzeng111" class="text-gray-500 hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/amyzeng111/" class="text-gray-500 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- WhatsApp Float Button -->
+        <a href="https://wa.me/91772688" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition duration-300 z-50">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Admin Login Screen -->
+    <div id="admin-login" class="hidden admin-login flex items-center justify-center">
+        <div class="login-card p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4">
+            <div class="text-center mb-8">
+                <img src="https://static.wixstatic.com/media/13f09a_6e16fb044073406ba53ac7cfb51017b0~mv2.png/v1/fill/w_133,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_6e16fb044073406ba53ac7cfb51017b0~mv2.png" alt="Amy Zeng Logo" class="h-16 mx-auto mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Amy Zeng CRM</h2>
+                <p class="text-gray-600">Admin Dashboard Login</p>
+            </div>
+            
+            <form id="admin-login-form">
+                <div class="mb-6">
+                    <label for="admin-username" class="block text-gray-700 font-medium mb-2">Username</label>
+                    <input type="text" id="admin-username" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-yellow-700" placeholder="Enter username">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="admin-password" class="block text-gray-700 font-medium mb-2">Password</label>
+                    <input type="password" id="admin-password" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-yellow-700" placeholder="Enter password">
+                </div>
+                
+                <button type="submit" class="w-full py-3 px-4 bg-yellow-700 hover:bg-yellow-600 text-white font-medium rounded-lg transition duration-300">
+                    Login to CRM
+                </button>
+                
+                <div class="mt-4 text-center">
+                    <button type="button" onclick="showPublicSite()" class="text-gray-600 hover:text-gray-800">
+                        ← Back to Website
+                    </button>
+                </div>
+                
+                <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                    <p class="text-sm text-gray-600 mb-2"><strong>Demo Credentials:</strong></p>
+                    <p class="text-sm text-gray-600">Username: <strong>admin</strong></p>
+                    <p class="text-sm text-gray-600">Password: <strong>admin123</strong></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CRM Dashboard -->
+    <div id="crm-dashboard" class="hidden">
+        <div class="flex h-screen bg-gray-100">
+            <!-- Sidebar -->
+            <aside class="crm-sidebar w-64 text-white p-6">
+                <!-- Mobile toggle button -->
+                <button id="mobile-sidebar-toggle" class="md:hidden mb-4 text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <div class="flex items-center mb-8">
+                    <img src="https://static.wixstatic.com/media/13f09a_6e16fb044073406ba53ac7cfb51017b0~mv2.png/v1/fill/w_133,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/13f09a_6e16fb044073406ba53ac7cfb51017b0~mv2.png" alt="Amy Zeng Logo" class="h-12 mr-3">
+                    <div>
+                        <h3 class="font-bold text-lg">Amy Zeng CRM</h3>
+                        <p class="text-sm text-gray-300">Admin Dashboard</p>
+                    </div>
+                </div>
+                
+                <nav class="space-y-2">
+                    <button onclick="showCRMSection('dashboard')" class="crm-sidebar-item active w-full text-left px-4 py-3 flex items-center">
+                        <i class="fas fa-tachometer-alt mr-3"></i>
+                        Dashboard
+                    </button>
+                    <button onclick="showCRMSection('statistics')" class="crm-sidebar-item w-full text-left px-4 py-3 flex items-center">
+                        <i class="fas fa-chart-line mr-3"></i>
+                        Statistics
+                    </button>
+                    <button onclick="showCRMSection('properties')" class="crm-sidebar-item w-full text-left px-4 py-3 flex items-center">
+                        <i class="fas fa-home mr-3"></i>
+                        Properties
+                    </button>
+                    <button onclick="showCRMSection('achievements')" class="crm-sidebar-item w-full text-left px-4 py-3 flex items-center">
+                        <i class="fas fa-trophy mr-3"></i>
+                        Achievements
+                    </button>
+                    <button onclick="showCRMSection('testimonials')" class="crm-sidebar-item w-full text-left px-4 py-3 flex items-center">
+                        <i class="fas fa-comments mr-3"></i>
+                        Testimonials
+                    </button>
+                    <button onclick="showCRMSection('blog')" class="crm-sidebar-item w-full text-left px-4 py-3 flex items-center">
+                        <i class="fas fa-blog mr-3"></i>
+                        Blog Posts
+                    </button>
+                    <button onclick="showCRMSection('contacts')" class="crm-sidebar-item w-full text-left px-4 py-3 flex items-center">
+                        <i class="fas fa-address-book mr-3"></i>
+                        Contact Info
+                    </button>
+                </nav>
+                
+                <div class="mt-auto pt-8">
+                    <button onclick="showPublicSite()" class="w-full px-4 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-eye mr-2"></i>
+                        View Website
+                    </button>
+                    <button onclick="logout()" class="w-full px-4 py-3 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center mt-2">
+                        <i class="fas fa-sign-out-alt mr-2"></i>
+                        Logout
+                    </button>
+                </div>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto">
+                <!-- Header -->
+                <header class="bg-white shadow-sm p-6 border-b">
+                    <div class="flex items-center justify-between">
+                        <h1 id="crm-page-title" class="text-2xl font-bold text-gray-800">Dashboard</h1>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-gray-600">Welcome back, Admin</span>
+                            <div class="h-8 w-8 bg-yellow-700 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-white text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- CRM Dashboard Content -->
+                <div id="crm-dashboard-content" class="p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                        <div class="crm-card p-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700">Total Properties</h3>
+                                    <p class="text-3xl font-bold text-yellow-700" id="total-properties">12</p>
+                                </div>
+                                <div class="text-yellow-700 text-3xl">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="crm-card p-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700">Total Transactions</h3>
+                                    <p class="text-3xl font-bold text-green-600" id="total-transactions-count">800+</p>
+                                </div>
+                                <div class="text-green-600 text-3xl">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="crm-card p-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700">Monthly Commission</h3>
+                                    <p class="text-3xl font-bold text-blue-600" id="monthly-commission-count">$250,000+</p>
+                                </div>
+                                <div class="text-blue-600 text-3xl">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="crm-card p-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700">Awards</h3>
+                                    <p class="text-3xl font-bold text-purple-600" id="total-awards">5</p>
+                                </div>
+                                <div class="text-purple-600 text-3xl">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="crm-card p-6">
+                            <h3 class="text-xl font-bold mb-4">Quick Actions</h3>
+                            <div class="space-y-3">
+                                <button onclick="showCRMSection('properties')" class="w-full px-4 py-3 bg-yellow-700 hover:bg-yellow-600 text-white rounded-lg text-left">
+                                    <i class="fas fa-plus mr-2"></i> Add New Property
+                                </button>
+                                <button onclick="showCRMSection('testimonials')" class="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-left">
+                                    <i class="fas fa-comment mr-2"></i> Add Testimonial
+                                </button>
+                                <button onclick="showCRMSection('achievements')" class="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-left">
+                                    <i class="fas fa-award mr-2"></i> Add Achievement
+                                </button>
+                                <button onclick="showCRMSection('blog')" class="w-full px-4 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-left">
+                                    <i class="fas fa-edit mr-2"></i> Write Blog Post
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="crm-card p-6">
+                            <h3 class="text-xl font-bold mb-4">Recent Activity</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                    <div class="h-2 w-2 bg-green-500 rounded-full mr-3"></div>
+                                    <span class="text-gray-700">Website data loaded successfully</span>
+                                </div>
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                    <div class="h-2 w-2 bg-blue-500 rounded-full mr-3"></div>
+                                    <span class="text-gray-700">CRM dashboard initialized</span>
+                                </div>
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                    <div class="h-2 w-2 bg-yellow-500 rounded-full mr-3"></div>
+                                    <span class="text-gray-700">Admin logged in</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Statistics Management -->
+                <div id="crm-statistics-content" class="hidden p-6">
+                    <div class="crm-card p-6 mb-6">
+                        <h3 class="text-xl font-bold mb-4">Manage Key Statistics</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Monthly Commission</label>
+                                <input type="text" id="edit-monthly-commission" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="$250,000+">
+                                <button onclick="updateStatistic('monthly-commission')" class="mt-2 px-4 py-2 bg-yellow-700 text-white rounded-lg hover:bg-yellow-600">Update</button>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Total Transactions</label>
+                                <input type="text" id="edit-total-transactions" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="800+">
+                                <button onclick="updateStatistic('total-transactions')" class="mt-2 px-4 py-2 bg-yellow-700 text-white rounded-lg hover:bg-yellow-600">Update</button>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Ranking</label>
+                                <input type="text" id="edit-ranking" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Top 50">
+                                <button onclick="updateStatistic('ranking')" class="mt-2 px-4 py-2 bg-yellow-700 text-white rounded-lg hover:bg-yellow-600">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Properties Management -->
+                <div id="crm-properties-content" class="hidden p-6">
+                    <div class="crm-card p-6 mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Property Listings</h3>
+                            <button onclick="addNewProperty()" class="px-4 py-2 bg-yellow-700 hover:bg-yellow-600 text-white rounded-lg">
+                                <i class="fas fa-plus mr-2"></i>Add Property
+                            </button>
+                        </div>
+                        <div id="properties-list" class="space-y-4">
+                            <!-- Property items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Achievements Management -->
+                <div id="crm-achievements-content" class="hidden p-6">
+                    <div class="crm-card p-6 mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Awards & Achievements</h3>
+                            <button onclick="addNewAchievement()" class="px-4 py-2 bg-yellow-700 hover:bg-yellow-600 text-white rounded-lg">
+                                <i class="fas fa-plus mr-2"></i>Add Achievement
+                            </button>
+                        </div>
+                        <div id="achievements-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Achievement items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonials Management -->
+                <div id="crm-testimonials-content" class="hidden p-6">
+                    <div class="crm-card p-6 mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Customer Testimonials</h3>
+                            <button onclick="addNewTestimonial()" class="px-4 py-2 bg-yellow-700 hover:bg-yellow-600 text-white rounded-lg">
+                                <i class="fas fa-plus mr-2"></i>Add Testimonial
+                            </button>
+                        </div>
+                        <div id="testimonials-list" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                            <!-- Testimonial items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Management -->
+                <div id="crm-blog-content" class="hidden p-6">
+                    <div class="crm-card p-6 mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Blog Posts & News</h3>
+                            <button onclick="addNewBlogPost()" class="px-4 py-2 bg-yellow-700 hover:bg-yellow-600 text-white rounded-lg">
+                                <i class="fas fa-plus mr-2"></i>Add Post
+                            </button>
+                        </div>
+                        <div id="blog-list" class="space-y-4">
+                            <!-- Blog items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Management -->
+                <div id="crm-contacts-content" class="hidden p-6">
+                    <div class="crm-card p-6 mb-6">
+                        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="text" id="edit-phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="9177 2688">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="edit-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="a91772688@gmail.com">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">PA Email</label>
+                                <input type="email" id="edit-pa-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="pa91772688@gmail.com">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">WeChat ID</label>
+                                <input type="text" id="edit-wechat" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="a91772688">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">CEA Number</label>
+                                <input type="text" id="edit-cea-number" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="CEA No: R027564Z">
+                            </div>
+                        </div>
+                        <button onclick="updateContactInfo()" class="mt-6 px-6 py-2 bg-yellow-700 hover:bg-yellow-600 text-white rounded-lg">
+                            Update Contact Information
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal for Adding/Editing Items -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-xl font-bold">Add Item</h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-content">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Global state management
+        let currentUser = null;
+        let crmData = {
+            statistics: {
+                monthlyCommission: '$250,000+',
+                totalTransactions: '800+',
+                ranking: 'Top 50'
+            },
+            properties: [],
+            achievements: [],
+            testimonials: [],
+            blog: [],
+            contactInfo: {
+                phone: '9177 2688',
+                email: 'a91772688@gmail.com',
+                paEmail: 'pa91772688@gmail.com',
+                wechat: 'a91772688',
+                ceaNumber: 'CEA No: R027564Z'
+            }
+        };
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            loadCRMData();
+        });
+
+        function initializeApp() {
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // Admin login form
+            const adminLoginForm = document.getElementById('admin-login-form');
+            if (adminLoginForm) {
+                adminLoginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const username = document.getElementById('admin-username').value;
+                    const password = document.getElementById('admin-password').value;
+                    
+                    if (username === 'admin' && password === 'admin123') {
+                        currentUser = { username: 'admin', role: 'admin' };
+                        showCRMDashboard();
+                    } else {
+                        alert('Invalid credentials. Please use:\nUsername: admin\nPassword: admin123');
+                    }
+                });
+            }
+
+            // Load CRM data from localStorage
+            const savedData = localStorage.getItem('amyZengCRM');
+            if (savedData) {
+                crmData = { ...crmData, ...JSON.parse(savedData) };
+            }
+        }
+
+        function showAdminLogin() {
+            document.getElementById('public-site').classList.add('hidden');
+            document.getElementById('admin-login').classList.remove('hidden');
+            document.getElementById('crm-dashboard').classList.add('hidden');
+        }
+
+        function showPublicSite() {
+            document.getElementById('public-site').classList.remove('hidden');
+            document.getElementById('admin-login').classList.add('hidden');
+            document.getElementById('crm-dashboard').classList.add('hidden');
+        }
+
+        function showCRMDashboard() {
+            document.getElementById('public-site').classList.add('hidden');
+            document.getElementById('admin-login').classList.add('hidden');
+            document.getElementById('crm-dashboard').classList.remove('hidden');
+            showCRMSection('dashboard');
+        }
+
+        function showCRMSection(section) {
+            // Hide all CRM content sections
+            const sections = ['dashboard', 'statistics', 'properties', 'achievements', 'testimonials', 'blog', 'contacts'];
+            sections.forEach(s => {
+                document.getElementById(`crm-${s}-content`).classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(`crm-${section}-content`).classList.remove('hidden');
+            
+            // Update page title
+            const titles = {
+                dashboard: 'Dashboard',
+                statistics: 'Statistics Management',
+                properties: 'Property Management',
+                achievements: 'Awards & Achievements',
+                testimonials: 'Testimonials Management',
+                blog: 'Blog Management',
+                contacts: 'Contact Information'
+            };
+            document.getElementById('crm-page-title').textContent = titles[section];
+            
+            // Update sidebar active state
+            document.querySelectorAll('.crm-sidebar-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Load section-specific data
+            loadSectionData(section);
+        }
+
+        function loadSectionData(section) {
+            switch(section) {
+                case 'statistics':
+                    loadStatisticsData();
+                    break;
+                case 'properties':
+                    loadPropertiesData();
+                    break;
+                case 'achievements':
+                    loadAchievementsData();
+                    break;
+                case 'testimonials':
+                    loadTestimonialsData();
+                    break;
+                case 'blog':
+                    loadBlogData();
+                    break;
+                case 'contacts':
+                    loadContactData();
+                    break;
+            }
+        }
+
+        function loadStatisticsData() {
+            document.getElementById('edit-monthly-commission').value = crmData.statistics.monthlyCommission;
+            document.getElementById('edit-total-transactions').value = crmData.statistics.totalTransactions;
+            document.getElementById('edit-ranking').value = crmData.statistics.ranking;
+        }
+
+        function updateStatistic(type) {
+            let value, elementId, crmKey;
+            
+            switch(type) {
+                case 'monthly-commission':
+                    value = document.getElementById('edit-monthly-commission').value;
+                    elementId = 'monthly-commission';
+                    crmKey = 'monthlyCommission';
+                    break;
+                case 'total-transactions':
+                    value = document.getElementById('edit-total-transactions').value;
+                    elementId = 'total-transactions';
+                    crmKey = 'totalTransactions';
+                    break;
+                case 'ranking':
+                    value = document.getElementById('edit-ranking').value;
+                    elementId = 'ranking';
+                    crmKey = 'ranking';
+                    break;
+            }
+            
+            if (value) {
+                // Update public site
+                const publicElement = document.querySelector(`[data-editable="${elementId}"]`);
+                if (publicElement) {
+                    publicElement.textContent = value;
+                }
+                
+                // Update CRM dashboard counters
+                if (type === 'monthly-commission') {
+                    document.getElementById('monthly-commission-count').textContent = value;
+                } else if (type === 'total-transactions') {
+                    document.getElementById('total-transactions-count').textContent = value;
+                }
+                
+                // Update CRM data
+                crmData.statistics[crmKey] = value;
+                saveCRMData();
+                
+                showNotification(`${type.replace('-', ' ').toUpperCase()} updated successfully!`);
+            }
+        }
+
+        function loadPropertiesData() {
+            const propertiesList = document.getElementById('properties-list');
+            propertiesList.innerHTML = '';
+            
+            // Sample properties data
+            const sampleProperties = [
+                { id: 1, title: 'D.8 City Square Residences', type: '1 Bedroom', status: 'RENTED' },
+                { id: 2, title: 'D2 International Plaza', type: '2 Bedroom', status: 'RENTED' },
+                { id: 3, title: 'D.11 Shelford Rd', type: '4 Bedroom', status: 'RENTED' },
+                { id: 4, title: 'D.4 Teresa Ville', type: '2 Bedroom', status: 'RENTED' }
+            ];
+            
+            sampleProperties.forEach(property => {
+                const propertyElement = createPropertyElement(property);
+                propertiesList.appendChild(propertyElement);
+            });
+        }
+
+        function createPropertyElement(property) {
+            const div = document.createElement('div');
+            div.className = 'bg-gray-50 p-4 rounded-lg flex justify-between items-center';
+            div.innerHTML = `
+                <div>
+                    <h4 class="font-semibold">${property.title}</h4>
+                    <p class="text-gray-600">${property.type}</p>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mt-1">${property.status}</span>
+                </div>
+                <div class="flex space-x-2">
+                    <button onclick="editProperty(${property.id})" class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button onclick="deleteProperty(${property.id})" class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `;
+            return div;
+        }
+
+        function loadAchievementsData() {
+            const achievementsList = document.getElementById('achievements-list');
+            achievementsList.innerHTML = '';
+            
+            // Sample achievements data
+            const sampleAchievements = [
+                { id: 1, title: 'ERA Diamond Achiever', description: 'Excellence in luxury property transactions' },
+                { id: 2, title: 'ERA Top 50 Achiever', description: 'Top 50 out of 9,000+ agents nationwide' },
+                { id: 3, title: 'ERA Plush Member', description: 'Elite distinction for only 50 agents nationwide' }
+            ];
+            
+            sampleAchievements.forEach(achievement => {
+                const achievementElement = createAchievementElement(achievement);
+                achievementsList.appendChild(achievementElement);
+            });
+        }
+
+        function createAchievementElement(achievement) {
+            const div = document.createElement('div');
+            div.className = 'bg-gray-50 p-4 rounded-lg';
+            div.innerHTML = `
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-semibold">${achievement.title}</h4>
+                    <div class="flex space-x-1">
+                        <button onclick="editAchievement(${achievement.id})" class="text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button onclick="deleteAchievement(${achievement.id})" class="text-red-600 hover:text-red-800">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm">${achievement.description}</p>
+            `;
+            return div;
+        }
+
+        function loadTestimonialsData() {
+            const testimonialsList = document.getElementById('testimonials-list');
+            testimonialsList.innerHTML = '';
+            
+            // Sample testimonials data
+            const sampleTestimonials = [
+                { 
+                    id: 1, 
+                    name: 'Mr Ng', 
+                    role: 'Buyer/Seller/Landlord',
+                    property: 'D.8 Shop (661 Buffalo Rd), D11 Landed house (Shelford Rd)',
+                    testimonial: 'Amy has managed all my property investment portfolio including commercial & residential since she was ERA TOP Rookie. She is property investor with strong investment background.'
+                },
+                { 
+                    id: 2, 
+                    name: 'Teng Hwee', 
+                    role: 'Owner',
+                    property: 'Coffeeshop: 10 Admiraty North Link #01-01/#01-02',
+                    testimonial: 'Praised Zeng\'s emotional intelligence, persuasive skills, and understanding of business owner psychology as key to the success of this exceptional deal.'
+                }
+            ];
+            
+            sampleTestimonials.forEach(testimonial => {
+                const testimonialElement = createTestimonialElement(testimonial);
+                testimonialsList.appendChild(testimonialElement);
+            });
+        }
+
+        function createTestimonialElement(testimonial) {
+            const div = document.createElement('div');
+            div.className = 'bg-gray-50 p-4 rounded-lg';
+            div.innerHTML = `
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h4 class="font-semibold">${testimonial.name}</h4>
+                        <p class="text-sm text-gray-600">${testimonial.role}</p>
+                        <p class="text-xs text-gray-500">${testimonial.property}</p>
+                    </div>
+                    <div class="flex space-x-1">
+                        <button onclick="editTestimonial(${testimonial.id})" class="text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button onclick="deleteTestimonial(${testimonial.id})" class="text-red-600 hover:text-red-800">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <blockquote class="text-gray-700 text-sm italic">"${testimonial.testimonial}"</blockquote>
+            `;
+            return div;
+        }
+
+        function loadBlogData() {
+            const blogList = document.getElementById('blog-list');
+            blogList.innerHTML = '';
+            
+            // Sample blog data
+            const sampleBlog = [
+                { 
+                    id: 1, 
+                    title: 'Singapore Property Market Trends 2024',
+                    excerpt: 'Analysis of current market conditions and future outlook...',
+                    date: '2024-01-15'
+                },
+                { 
+                    id: 2, 
+                    title: 'Investment Strategies for Foreign Buyers',
+                    excerpt: 'Key considerations for international property investors...',
+                    date: '2024-01-10'
+                }
+            ];
+            
+            sampleBlog.forEach(post => {
+                const postElement = createBlogElement(post);
+                blogList.appendChild(postElement);
+            });
+        }
+
+        function createBlogElement(post) {
+            const div = document.createElement('div');
+            div.className = 'bg-gray-50 p-4 rounded-lg flex justify-between items-start';
+            div.innerHTML = `
+                <div class="flex-1">
+                    <h4 class="font-semibold mb-1">${post.title}</h4>
+                    <p class="text-gray-600 text-sm mb-2">${post.excerpt}</p>
+                    <p class="text-xs text-gray-500">Published: ${post.date}</p>
+                </div>
+                <div class="flex space-x-2 ml-4">
+                    <button onclick="editBlogPost(${post.id})" class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button onclick="deleteBlogPost(${post.id})" class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `;
+            return div;
+        }
+
+        function loadContactData() {
+            document.getElementById('edit-phone').value = crmData.contactInfo.phone;
+            document.getElementById('edit-email').value = crmData.contactInfo.email;
+            document.getElementById('edit-pa-email').value = crmData.contactInfo.paEmail;
+            document.getElementById('edit-wechat').value = crmData.contactInfo.wechat;
+            document.getElementById('edit-cea-number').value = crmData.contactInfo.ceaNumber;
+        }
+
+        function updateContactInfo() {
+            const phone = document.getElementById('edit-phone').value;
+            const email = document.getElementById('edit-email').value;
+            const paEmail = document.getElementById('edit-pa-email').value;
+            const wechat = document.getElementById('edit-wechat').value;
+            const ceaNumber = document.getElementById('edit-cea-number').value;
+            
+            // Update public site
+            const phoneElement = document.querySelector('[data-editable="phone"]');
+            if (phoneElement) phoneElement.textContent = phone;
+            
+            const emailElement = document.querySelector('[data-editable="email"]');
+            if (emailElement) emailElement.textContent = email;
+            
+            const paEmailElement = document.querySelector('[data-editable="pa-email"]');
+            if (paEmailElement) paEmailElement.textContent = paEmail;
+            
+            const wechatElement = document.querySelector('[data-editable="wechat"]');
+            if (wechatElement) wechatElement.textContent = wechat;
+            
+            const ceaElement = document.querySelector('[data-editable="cea-number"]');
+            if (ceaElement) ceaElement.textContent = ceaNumber;
+            
+            // Update CRM data
+            crmData.contactInfo = { phone, email, paEmail, wechat, ceaNumber };
+            saveCRMData();
+            
+            showNotification('Contact information updated successfully!');
+        }
+
+        // Modal functions
+        function showModal(title, content) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-content').innerHTML = content;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Add new item functions
+        function addNewProperty() {
+            const content = `
+                <form onsubmit="saveProperty(event)">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Property Title</label>
+                        <input type="text" id="property-title" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Property Type</label>
+                        <input type="text" id="property-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Status</label>
+                        <select id="property-status" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            <option value="AVAILABLE">AVAILABLE</option>
+                            <option value="RENTED">RENTED</option>
+                            <option value="SOLD">SOLD</option>
+                        </select>
+                    </div>
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-500 text-white rounded-lg">Cancel</button>
+                        <button type="submit" class="px-4 py-2 bg-yellow-700 text-white rounded-lg">Save Property</button>
+                    </div>
+                </form>
+            `;
+            showModal('Add New Property', content);
+        }
+
+        function addNewAchievement() {
+            const content = `
+                <form onsubmit="saveAchievement(event)">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Achievement Title</label>
+                        <input type="text" id="achievement-title" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Description</label>
+                        <textarea id="achievement-description" class="w-full px-4 py-2 border border-gray-300 rounded-lg" rows="3" required></textarea>
+                    </div>
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-500 text-white rounded-lg">Cancel</button>
+                        <button type="submit" class="px-4 py-2 bg-yellow-700 text-white rounded-lg">Save Achievement</button>
+                    </div>
+                </form>
+            `;
+            showModal('Add New Achievement', content);
+        }
+
+        function addNewTestimonial() {
+            const content = `
+                <form onsubmit="saveTestimonial(event)">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Customer Name</label>
+                        <input type="text" id="testimonial-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Role</label>
+                        <input type="text" id="testimonial-role" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Property</label>
+                        <input type="text" id="testimonial-property" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Testimonial</label>
+                        <textarea id="testimonial-content" class="w-full px-4 py-2 border border-gray-300 rounded-lg" rows="4" required></textarea>
+                    </div>
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-500 text-white rounded-lg">Cancel</button>
+                        <button type="submit" class="px-4 py-2 bg-yellow-700 text-white rounded-lg">Save Testimonial</button>
+                    </div>
+                </form>
+            `;
+            showModal('Add New Testimonial', content);
+        }
+
+        function addNewBlogPost() {
+            const content = `
+                <form onsubmit="saveBlogPost(event)">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Post Title</label>
+                        <input type="text" id="blog-title" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Excerpt</label>
+                        <textarea id="blog-excerpt" class="w-full px-4 py-2 border border-gray-300 rounded-lg" rows="2" required></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Content</label>
+                        <textarea id="blog-content" class="w-full px-4 py-2 border border-gray-300 rounded-lg" rows="6" required></textarea>
+                    </div>
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-500 text-white rounded-lg">Cancel</button>
+                        <button type="submit" class="px-4 py-2 bg-yellow-700 text-white rounded-lg">Save Post</button>
+                    </div>
+                </form>
+            `;
+            showModal('Add New Blog Post', content);
+        }
+
+        // Save functions
+        function saveProperty(event) {
+            event.preventDefault();
+            const title = document.getElementById('property-title').value;
+            const type = document.getElementById('property-type').value;
+            const status = document.getElementById('property-status').value;
+            
+            // Add to properties list (in real app, this would go to database)
+            showNotification('Property added successfully!');
+            closeModal();
+            loadPropertiesData();
+        }
+
+        function saveAchievement(event) {
+            event.preventDefault();
+            const title = document.getElementById('achievement-title').value;
+            const description = document.getElementById('achievement-description').value;
+            
+            showNotification('Achievement added successfully!');
+            closeModal();
+            loadAchievementsData();
+        }
+
+        function saveTestimonial(event) {
+            event.preventDefault();
+            const name = document.getElementById('testimonial-name').value;
+            const role = document.getElementById('testimonial-role').value;
+            const property = document.getElementById('testimonial-property').value;
+            const content = document.getElementById('testimonial-content').value;
+            
+            showNotification('Testimonial added successfully!');
+            closeModal();
+            loadTestimonialsData();
+        }
+
+        function saveBlogPost(event) {
+            event.preventDefault();
+            const title = document.getElementById('blog-title').value;
+            const excerpt = document.getElementById('blog-excerpt').value;
+            const content = document.getElementById('blog-content').value;
+            
+            showNotification('Blog post added successfully!');
+            closeModal();
+            loadBlogData();
+        }
+
+        // Edit functions (placeholders)
+        function editProperty(id) {
+            showNotification('Edit property functionality - coming soon!');
+        }
+
+        function editAchievement(id) {
+            showNotification('Edit achievement functionality - coming soon!');
+        }
+
+        function editTestimonial(id) {
+            showNotification('Edit testimonial functionality - coming soon!');
+        }
+
+        function editBlogPost(id) {
+            showNotification('Edit blog post functionality - coming soon!');
+        }
+
+        // Delete functions (placeholders)
+        function deleteProperty(id) {
+            if (confirm('Are you sure you want to delete this property?')) {
+                showNotification('Property deleted successfully!');
+                loadPropertiesData();
+            }
+        }
+
+        function deleteAchievement(id) {
+            if (confirm('Are you sure you want to delete this achievement?')) {
+                showNotification('Achievement deleted successfully!');
+                loadAchievementsData();
+            }
+        }
+
+        function deleteTestimonial(id) {
+            if (confirm('Are you sure you want to delete this testimonial?')) {
+                showNotification('Testimonial deleted successfully!');
+                loadTestimonialsData();
+            }
+        }
+
+        function deleteBlogPost(id) {
+            if (confirm('Are you sure you want to delete this blog post?')) {
+                showNotification('Blog post deleted successfully!');
+                loadBlogData();
+            }
+        }
+
+        // Utility functions
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        function saveCRMData() {
+            localStorage.setItem('amyZengCRM', JSON.stringify(crmData));
+        }
+
+        function loadCRMData() {
+            const savedData = localStorage.getItem('amyZengCRM');
+            if (savedData) {
+                crmData = { ...crmData, ...JSON.parse(savedData) };
+            }
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                currentUser = null;
+                showPublicSite();
+            }
+        }
+
+        // Mobile sidebar toggle for CRM
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileSidebarToggle = document.getElementById('mobile-sidebar-toggle');
+            const crmSidebar = document.querySelector('.crm-sidebar');
+            
+            if (mobileSidebarToggle && crmSidebar) {
+                mobileSidebarToggle.addEventListener('click', function() {
+                    crmSidebar.classList.toggle('mobile-open');
+                });
+            }
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"967cd2ad3df457a7","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.7.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDp8AnNpoo9H0foFrfB%2BM0YvWt4UbzMMUjdfBMXbqbd%2F%2FWH3ENcgzhItCsUdMCsM0M%2B9nLst%2B1wxIMHVLdPKci%2BPbF6KzhdsQxinyyPsnH%2BvJ6sBY3JP4DaALMcqQTFLaOZruiZrcrWH8Twux4Zqb7ikcKU72zTDmqujfWIkzmQrDTGW3Hfjbpqa%2B6rvQ0Dt875j6HD33RoqHGmMT06EVrMIJOYdL439oTJUdOKOf3brE%2FZ8fhgOtx2vWTEs2Lzz%2FXA5tuDslGwnuHtRB2uG92hZoOYMczzDmd0omvpYY2lns0oOyTdH1FzMUdV7a21h0pxI2SVy9tZF7Vddjy%2F5r8%2FkMapa%2FI4tz5GoFqs8dsaUGw7za0No1UvQCz4F%2BB0TdCLn%2FL1CmghNmBFB54dkJQHhkjnMxxrWuqq7Zc%2FcHm9iE%2BbCWWiQEauznD0YigKRKIsoznl5aBS5fmHrfR4tbV5mU%2BGD%2FOm2aQ7t1HlF8RTaMIFKJ1%2Fr1KzQ2kF%2FXHWDo1i5%2BvmaKNk6UP8i%2FvfPHeXI%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDp8AnNpoo9H0foFrfB+M0YvWt4UbzMMUjdfBMXbqbd//WH3ENcgzhItCsUdMCsM0M+9nLst+1wxIMHVLdPKci+PbF6KzhdsQxinyyPsnH+vJ6sBY3JP4DaALMcqQTFLaOZruiZrcrWH8Twux4Zqb7ikcKU72zTDmqujfWIkzmQrDTGW3Hfjbpqa+6rvQ0Dt875j6HD33RoqHGmMT06EVrMIJOYdL439oTJUdOKOf3brE/Z8fhgOtx2vWTEs2Lzz/XA5tuDslGwnuHtRB2uG92hZoOYMczzDmd0omvpYY2lns0oOyTdH1FzMUdV7a21h0pxI2SVy9tZF7Vddjy/5r8/kMapa/I4tz5GoFqs8dsaUGw7za0No1UvQCz4F+B0TdCLn/L1CmghNmBFB54dkJQHhkjnMxxrWuqq7Zc/cHm9iE+bCWWiQEauznD0YigKRKIsoznl5aBS5fmHrfR4tbV5mU+GD/Om2aQ7t1HlF8RTaMIFKJ1/r1KzQ2kF/XHWDo1i5+vmaKNk6UP8i/vfPHeXI=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

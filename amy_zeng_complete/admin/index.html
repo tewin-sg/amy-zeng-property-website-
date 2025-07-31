@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Zeng Admin - Content Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .admin-gradient {
+            background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
+        }
+        .cms-container {
+            min-height: 100vh;
+        }
+        .loading-spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #b8860b;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .welcome-card {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 admin-gradient flex items-center justify-center z-50">
+        <div class="text-center text-white">
+            <div class="loading-spinner mx-auto mb-6"></div>
+            <h2 class="text-2xl font-bold mb-2">Amy Zeng Property Admin</h2>
+            <p class="text-lg opacity-90">Loading Content Management System...</p>
+            <div class="mt-6 flex items-center justify-center space-x-2">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-sm">ERA Diamond Achiever CMS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Header -->
+    <header class="admin-gradient text-white py-6" id="admin-header" style="display: none;">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Amy Zeng Property Admin</h1>
+                        <p class="text-sm opacity-90">ERA Diamond Achiever Content Management</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="text-right text-sm">
+                        <p class="opacity-90">Singapore Property Expert</p>
+                        <p class="font-medium">CEA No: R027564</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-full p-2">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome Card (shown before CMS loads) -->
+    <div id="welcome-section" class="min-h-screen admin-gradient flex items-center justify-center p-4" style="display: none;">
+        <div class="welcome-card rounded-2xl shadow-2xl p-8 max-w-md w-full text-center">
+            <div class="mb-6">
+                <div class="bg-yellow-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-home text-3xl text-yellow-700"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Welcome to Admin Panel</h2>
+                <p class="text-gray-600">Manage your property website content with ease</p>
+            </div>
+            
+            <div class="space-y-4 mb-6">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span class="text-sm text-gray-600">Properties</span>
+                    <i class="fas fa-building text-yellow-700"></i>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span class="text-sm text-gray-600">Testimonials</span>
+                    <i class="fas fa-quote-left text-yellow-700"></i>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span class="text-sm text-gray-600">Achievements</span>
+                    <i class="fas fa-trophy text-yellow-700"></i>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span class="text-sm text-gray-600">Media Content</span>
+                    <i class="fas fa-photo-video text-yellow-700"></i>
+                </div>
+            </div>
+            
+            <button onclick="initializeCMS()" class="w-full bg-yellow-700 hover:bg-yellow-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                <i class="fas fa-sign-in-alt mr-2"></i>
+                Access Content Manager
+            </button>
+        </div>
+    </div>
+
+    <!-- CMS Container -->
+    <div id="cms-container" class="cms-container" style="display: none;">
+        <!-- Netlify CMS will be injected here -->
+    </div>
+
+    <!-- Footer -->
+    <footer id="admin-footer" class="bg-gray-800 text-white py-4 text-center text-sm" style="display: none;">
+        <p>&copy; 2024 Amy Zeng Property Admin. ERA Diamond Achiever CMS.</p>
+    </footer>
+
+    <!-- Netlify Identity Widget -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    
+    <script>
+        // CMS Configuration
+        const cmsConfig = {
+            backend: {
+                name: 'git-gateway',
+                branch: 'main'
+            },
+            media_folder: 'assets/uploads',
+            public_folder: '/assets/uploads',
+            collections: [
+                {
+                    name: 'pages',
+                    label: 'Pages',
+                    files: [
+                        {
+                            name: 'home',
+                            label: 'Home Page',
+                            file: 'index.html',
+                            fields: [
+                                {
+                                    label: 'Page Title',
+                                    name: 'title',
+                                    widget: 'string'
+                                },
+                                {
+                                    label: 'Meta Description',
+                                    name: 'description',
+                                    widget: 'text'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'properties',
+                    label: 'Properties',
+                    folder: '_properties',
+                    create: true,
+                    fields: [
+                        {
+                            label: 'Title',
+                            name: 'title',
+                            widget: 'string'
+                        },
+                        {
+                            label: 'Featured Image',
+                            name: 'image',
+                            widget: 'image'
+                        },
+                        {
+                            label: 'Price',
+                            name: 'price',
+                            widget: 'string'
+                        },
+                        {
+                            label: 'Location',
+                            name: 'location',
+                            widget: 'string'
+                        },
+                        {
+                            label: 'Property Type',
+                            name: 'type',
+                            widget: 'select',
+                            options: ['Condo', 'Landed', 'HDB', 'Commercial']
+                        },
+                        {
+                            label: 'Status',
+                            name: 'status',
+                            widget: 'select',
+                            options: ['Available', 'Sold', 'Rented']
+                        },
+                        {
+                            label: 'Description',
+                            name: 'description',
+                            widget: 'markdown'
+                        },
+                        {
+                            label: 'Features',
+                            name: 'features',
+                            widget: 'list',
+                            field: {
+                                label: 'Feature',
+                                name: 'feature',
+                                widget: 'string'
+                            }
+                        }
+                    ]
+                },
+                {
+                    name: 'testimonials',
+                    label: 'Testimonials',
+                    folder: '_testimonials',
+                    create: true,
+                    fields: [
+                        {
+                            label: 'Client Name',
+                            name: 'name',
+                            widget: 'string'
+                        },
+                        {
+                            label: 'Client Photo',
+                            name: 'photo',
+                            widget: 'image',
+                            required: false
+                        },
+                        {
+                            label: 'Property Involved',
+                            name: 'property',
+                            widget: 'string'
+                        },
+                        {
+                            label: 'Testimonial',
+                            name: 'testimonial',
+                            widget: 'text'
+                        },
+                        {
+                            label: 'Rating',
+                            name: 'rating',
+                            widget: 'number',
+                            min: 1,
+                            max: 5
+                        }
+                    ]
+                },
+                {
+                    name: 'achievements',
+                    label: 'Achievements',
+                    folder: '_achievements',
+                    create: true,
+                    fields: [
+                        {
+                            label: 'Achievement Title',
+                            name: 'title',
+                            widget: 'string'
+                        },
+                        {
+                            label: 'Award Image',
+                            name: 'image',
+                            widget: 'image'
+                        },
+                        {
+                            label: 'Year',
+                            name: 'year',
+                            widget: 'string'
+                        },
+                        {
+                            label: 'Description',
+                            name: 'description',
+                            widget: 'text'
+                        },
+                        {
+                            label: 'Achievement Type',
+                            name: 'type',
+                            widget: 'select',
+                            options: ['Award', 'Recognition', 'Certification', 'Media']
+                        }
+                    ]
+                },
+                {
+                    name: 'settings',
+                    label: 'Settings',
+                    files: [
+                        {
+                            name: 'contact',
+                            label: 'Contact Information',
+                            file: '_data/contact.yml',
+                            fields: [
+                                {
+                                    label: 'Phone Number',
+                                    name: 'phone',
+                                    widget: 'string'
+                                },
+                                {
+                                    label: 'Email',
+                                    name: 'email',
+                                    widget: 'string'
+                                },
+                                {
+                                    label: 'WeChat ID',
+                                    name: 'wechat',
+                                    widget: 'string'
+                                },
+                                {
+                                    label: 'Social Media Links',
+                                    name: 'social',
+                                    widget: 'object',
+                                    fields: [
+                                        {
+                                            label: 'Facebook',
+                                            name: 'facebook',
+                                            widget: 'string'
+                                        },
+                                        {
+                                            label: 'Instagram',
+                                            name: 'instagram',
+                                            widget: 'string'
+                                        },
+                                        {
+                                            label: 'LinkedIn',
+                                            name: 'linkedin',
+                                            widget: 'string'
+                                        },
+                                        {
+                                            label: 'TikTok',
+                                            name: 'tiktok',
+                                            widget: 'string'
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+        // Initialize loading screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('welcome-section').style.display = 'flex';
+            }, 2000);
+        });
+
+        function initializeCMS() {
+            // Hide welcome section
+            document.getElementById('welcome-section').style.display = 'none';
+            
+            // Show CMS container and header
+            document.getElementById('cms-container').style.display = 'block';
+            document.getElementById('admin-header').style.display = 'block';
+            document.getElementById('admin-footer').style.display = 'block';
+            
+            // Initialize Netlify CMS
+            CMS.init({ config: cmsConfig });
+
+            // Custom preview templates
+            CMS.registerPreviewTemplate('properties', ({ entry, widgetFor, widgetsFor }) => {
+                return `
+                    <div class="property-preview">
+                        <h2>${entry.getIn(['data', 'title'])}</h2>
+                        <div class="property-details">
+                            <p><strong>Price:</strong> ${entry.getIn(['data', 'price'])}</p>
+                            <p><strong>Location:</strong> ${entry.getIn(['data', 'location'])}</p>
+                            <p><strong>Type:</strong> ${entry.getIn(['data', 'type'])}</p>
+                            <p><strong>Status:</strong> ${entry.getIn(['data', 'status'])}</p>
+                        </div>
+                        <div class="description">
+                            ${widgetFor('description')}
+                        </div>
+                    </div>
+                `;
+            });
+
+            CMS.registerPreviewTemplate('testimonials', ({ entry }) => {
+                return `
+                    <div class="testimonial-preview">
+                        <blockquote>
+                            "${entry.getIn(['data', 'testimonial'])}"
+                        </blockquote>
+                        <cite>
+                            - ${entry.getIn(['data', 'name'])}, ${entry.getIn(['data', 'property'])}
+                        </cite>
+                        <div class="rating">
+                            Rating: ${entry.getIn(['data', 'rating'])}/5 stars
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Netlify Identity handling
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDmSMkRd6XrjVQV73%2BkFTNW7dVEaQ569N%2FO4mHkjikYUZQajSbYZ1xDwbm10m9wIUDR3vg%2FU0lqoEh7JEbKVA%2BSQzUCcOT1aZognWm6DPc21yUhFR1ptYeOa2CvXU%2F73Y%2FzJ0yi5vNfFeLOoHQzOQdngHABTLsIjL%2FdlZYTorb8%2FwQo2v%2F0SRQhavHmTVHSxpg8F5vi0MA16E5ihcgK3EBlK0zlSceb367UpW3yYmLeodbQNLm1pV3UZZYqkG5Yb27ZL9a5sp3Y42S1QgY5NRbmbepHNq7srPLT7nuAQ29hFjmFyCLxqmACXpSAhOdWl1AIWBH4czLp3KSwAN0oxex6R64U%2B9cO%2B6yPG8%2FoZo2G8etIiYNOiN0xlE4kSmbI%2FpyafhuwFu%2BafjRAhQQEODQj9ldkLeFCp0%2FB4Tx51QG38kth%2BXlwxrdSlyuUyr695q9rM095Ml1On%2FN5LsYpgdId%2FIOcQsfDBlFGl4luoCaW3kDeta4G2vny1BPWxtv6G%2FVw%3D%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDmSMkRd6XrjVQV73+kFTNW7dVEaQ569N/O4mHkjikYUZQajSbYZ1xDwbm10m9wIUDR3vg/U0lqoEh7JEbKVA+SQzUCcOT1aZognWm6DPc21yUhFR1ptYeOa2CvXU/73Y/zJ0yi5vNfFeLOoHQzOQdngHABTLsIjL/dlZYTorb8/wQo2v/0SRQhavHmTVHSxpg8F5vi0MA16E5ihcgK3EBlK0zlSceb367UpW3yYmLeodbQNLm1pV3UZZYqkG5Yb27ZL9a5sp3Y42S1QgY5NRbmbepHNq7srPLT7nuAQ29hFjmFyCLxqmACXpSAhOdWl1AIWBH4czLp3KSwAN0oxex6R64U+9cO+6yPG8/oZo2G8etIiYNOiN0xlE4kSmbI/pyafhuwFu+afjRAhQQEODQj9ldkLeFCp0/B4Tx51QG38kth+XlwxrdSlyuUyr695q9rM095Ml1On/N5LsYpgdId/IOcQsfDBlFGl4luoCaW3kDeta4G2vny1BPWxtv6G/Vw==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
