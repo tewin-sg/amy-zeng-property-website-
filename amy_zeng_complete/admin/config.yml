@@ -1,19 +1,93 @@
 backend:
   name: git-gateway
   branch: main
-  auth_type: implicit
-  app_id: inspiring-choux-2cfd44
 
 media_folder: "images"
 public_folder: "/images"
 
 collections:
   - name: "pages"
-    label: "Pages"
+    label: "Site Pages"
     files:
       - file: "amy_zeng_complete/index.html"
         label: "Home Page"
         name: "home"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Hero Section", name: "hero", widget: "markdown"}
+          - {label: "About Section", name: "about", widget: "markdown"}
+          - {label: "Services Section", name: "services", widget: "markdown"}
+
+  - name: "properties"
+    label: "Property Listings"
+    folder: "properties"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Property Title", name: "title", widget: "string"}
+      - {label: "Property Type", name: "type", widget: "select", options: ["House", "Condo", "Townhouse", "Commercial"]}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Address", name: "address", widget: "string"}
+      - {label: "Bedrooms", name: "bedrooms", widget: "number"}
+      - {label: "Bathrooms", name: "bathrooms", widget: "number"}
+      - {label: "Square Feet", name: "sqft", widget: "number"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Property Images", name: "images", widget: "list", field: {label: "Image", name: "image", widget: "image"}}
+      - {label: "Status", name: "status", widget: "select", options: ["For Sale", "Sold", "Pending"]}
+      - {label: "Featured Property", name: "featured", widget: "boolean", default: false}
+
+  - name: "testimonials"
+    label: "Client Testimonials"
+    folder: "testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Client Name", name: "name", widget: "string"}
+      - {label: "Client Title/Occupation", name: "title", widget: "string", required: false}
+      - {label: "Testimonial", name: "testimonial", widget: "text"}
+      - {label: "Rating", name: "rating", widget: "select", options: ["5", "4", "3", "2", "1"]}
+      - {label: "Client Photo", name: "photo", widget: "image", required: false}
+      - {label: "Property Type Sold/Bought", name: "property_type", widget: "string", required: false}
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string", default: "Amy Zeng"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featured_image", widget: "image"}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["Real Estate"]}
+      - {label: "Published", name: "published", widget: "boolean", default: false}
+
+  - name: "services"
+    label: "Services"
+    folder: "services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Service Name", name: "title", widget: "string"}
+      - {label: "Service Icon", name: "icon", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Features", name: "features", widget: "list", field: {label: "Feature", name: "feature", widget: "string"}}
+      - {label: "Service Order", name: "order", widget: "number", default: 1}
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "data/contact.yml"
+        label: "Contact Information"
+        name: "contact"
+        fields:
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Office Address", name: "address", widget: "text"}
+          - {label: "Social Media Links", name: "social", widget: "object", fields: [
+              {label: "LinkedIn", name: "linkedin", widget: "string", required: false},
+              {label: "Facebook", name: "facebook", widget: "string", required: false},
+              {label: "Instagram", name: "instagram", widget: "string", required: false}
+            ]}
